@@ -88,6 +88,11 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+        $request->validate([
+            'name' => 'required',
+            'nrp' => 'required|size:9'
+        ]);
+        
         Student::where('id', $student->id)
                 ->update([
                     'name' => $request->name,
