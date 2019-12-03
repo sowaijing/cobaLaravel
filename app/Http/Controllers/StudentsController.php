@@ -76,6 +76,7 @@ class StudentsController extends Controller
     public function edit(Student $student)
     {
         //
+        return view('students/edit',compact('student'));
     }
 
     /**
@@ -87,7 +88,14 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        Student::where('id', $student->id)
+                ->update([
+                    'name' => $request->name,
+                    'nrp' => $request->nrp,
+                    'email' => $request->email,
+                    'course' => $request->course
+                ]);
+        return redirect('/students')->with('status','Student successfully edited!');
     }
 
     /**
