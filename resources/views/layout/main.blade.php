@@ -13,20 +13,23 @@
   <body>
 	   <nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #e3f2fd;">
 	   	<div class="container">
-	  <a class="navbar-brand" href="">Laravel</a>
+	  <a class="navbar-brand" href="{{url('/')}}">Laravel</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 	      <li class="nav-item active">
-	        <a class="nav-link" href="home">Home</a>
+	        <a class="nav-link" href="{{url('/')}}">Home</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="about">About</a>
+	        <a class="nav-link" href="{{url('/about')}}">About</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="mahasiswa">Mahasiswa</a>
+	        <a class="nav-link" href="{{url('/mahasiswa')}}">Mahasiswa</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="{{url('/students')}}">Students</a>
 	      </li>
 	    </ul>
 	  </div>
